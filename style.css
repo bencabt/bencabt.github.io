@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400i,900");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  line-height: 1;
+}
+.grid-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+@media (min-width: 75em) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 2fr));
+  }
+}
+.our-team {
+  background: #232324;
+  padding: 1em 0;
+  color: rgba(248, 248, 248, 0.6);
+}
+.team-description {
+  grid-column: span 2;
+}
+
+.team-title {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 4rem;
+  color: #f8f8f8;
+  margin-top: 0;
+  line-height: 1;
+}
+.team-title span {
+  display: block;
+  font-weight: 900;
+  font-size: 5rem;
+}
+.team-member {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.team-member img {
+  width: 100%;
+  display: block;
+}
+.team-member figcaption {
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  right: 1em;
+  left: 1em;
+  font-size: 3em;
+  background: rgba(106, 106, 112, 0.8);
+  color: #c6c6c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 300ms;
+}
+.team-member:hover figcaption {
+  opacity: 1;
+}
+.team-member .name {
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.proj-title {
+  font-size: 5em;
+  text-align: center;
+  padding-bottom: 0em;
+  margin-bottom: 5%;
+}
+
+.proj-description {
+  font-size: 28px;
+  text-align: center;
+}
+
+hr.beautiful-line {
+  border: 2px solid rgb(134, 49, 49);
+  width: 95%;
+}
+
+.list {
+  font-size: 24px;
+}
+
+.hyper-link {
+  color: #8e8ef0;
+}
+
+.name-cap {
+  font-size: 32px;
+  text-align: center;
+}
