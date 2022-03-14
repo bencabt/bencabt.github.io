@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Raleway:300,400i,900");
+      video{
+        position:absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+      @import url("https://fonts.googleapis.com/css?family=Raleway:300,400i,900");
+      /* GRID */
+      body {
+        height: calc(100vh - 4rem);
+      }
+
+      /*
+      .tiles {
+        max-width: 98.57rem;
+        margin: 0;
+        min-height: 100%;
+        background: #232324;
+        
+      }
+      
+      
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: 100px;
+        
+      }
+
+      */
+
+      /*Title*/
+      
+
+
+      .video{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+      }
+
+      .title {
+        font-family: "Raleway", sans-serif;
+       /* display: flex; */
+
+        font-weight: 900;
+        font-size: 6rem;
+        margin-top: 40vh;
+
+        /*padding: 1em 1em;*/
+        color: rgba(255, 255, 255); 
+        text-align: center;
+        justify-content: center; 
+
+        line-height: 100%;
+        margin-left: 5vh;
+
+      }
+      .fillertext{
+        font-family: "Raleway", sans-serif;
+       /* display: flex; */
+
+        font-weight: 300;
+        font-size: 3rem;
+        margin-top: 40vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+        
+        /*padding: 1em 1em;*/
+        color: rgba(255, 255, 255); 
+        text-align: center;
+        justify-content: center; 
+      }
+
+
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div class="video">
+      <div class="title">Heat Engine</div>
+      <div class="fillertext">This is a project which introduced me to using Mastercam, Protorak, and precision machining to produce a working heat engine.</div>
+      <video autoplay playsinline muted id="videoPlayer">
+      
+    </div>
+    
+    <!-- JAVA SCRIPT-->
+    <script>
+      let videoSource = new Array();
+      videoSource[0] = "headengineimages/heatEngineVidcopy.mp4";
+      videoSource[1] = "headengineimages/heatEngineVidcopy.mp4";
+      //videoSource[2] = "videos/signVid3.mp4";
+      let i = 0; // global
+      const videoCount = videoSource.length;
+      const element = document.getElementById("videoPlayer");
+  
+      function videoPlay(videoNum) {
+        element.setAttribute("src", videoSource[videoNum]);
+        element.autoplay = true;
+        element.load();
+      }
+      document
+        .getElementById("videoPlayer")
+        .addEventListener("ended", myHandler, false);
+  
+      videoPlay(0); // load the first video
+      ensureVideoPlays(); // play the video automatically
+  
+      function myHandler() {
+        i++;
+        if (i == videoCount) {
+          i = 0;
+          videoPlay(i);
+        } else {
+          videoPlay(i);
+        }
+      }
+  
+      function ensureVideoPlays() {
+        const video = document.getElementById("videoPlayer");
+  
+        if (!video) return;
+  
+        const promise = video.play();
+        if (promise !== undefined) {
+          promise
+            .then(() => {
+              // Autoplay started
+            })
+            .catch((error) => {
+              // Autoplay was prevented.
+              video.muted = true;
+              video.play();
+            });
+        }
+      }
+    </script>
+
+    <!-- Carousel Test-->
+
+    <style>
+      
+      /*
+      .carousel-item {
+        height: 50vh;
+        background: #777;
+        color: white;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        margin-top: 26%; 
+      } */
+
+      /*
+      .container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 50px;
+      }
+      */
+
+      .overlay-image {
+        position: relative;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+
+    </style>
+
+
+      <!--Carousel Items *** I WANT TO LEARN HOW TO COMBINE THE IMAGES SO THERE ARE MULTIPLE PER SLIDE-->
+         <div
+      class="overlay-image"
+      style="background-image: url(headengineimages/heat1.jpg)"
+        >  </div>
+
+          <div
+            class="overlay-image"
+            style="background-image: url(headengineimages/heat2.png)"
+          ></div>
+         
+
+          <div
+            class="overlay-image"
+            style="background-image: url(headengineimages/heat3.jpg)"
+          ></div>
+        
+          <div
+            class="overlay-image"
+            style="background-image: url(headengineimages/heat4.jpg)"
+          ></div>
+    
+
+      
+
+
+
+      <!--Previous and next buttons-->
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+    <!--Carousel Test End-->
+
+
+
+  </body>
+
+
+  
+</html>
+
+
+
+<!--Media query for mobile
+
+- set min and max widths
+- relative - elements need to respect eachother vs absolute - moving the video
+- clamp - define flexible unit
+- flexbox
+- 
+- 
+
+-->
+

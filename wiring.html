@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Raleway:300,400i,900");
+      video{
+        position:absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+      @import url("https://fonts.googleapis.com/css?family=Raleway:300,400i,900");
+      /* GRID */
+      body {
+        height: calc(100vh - 4rem);
+      }
+
+      /*
+      .tiles {
+        max-width: 98.57rem;
+        margin: 0;
+        min-height: 100%;
+        background: #232324;
+        
+      }
+      
+      
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: 100px;
+        
+      }
+
+      */
+
+      /*Title*/
+      
+
+
+      .video{
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+        
+
+        /*text-align: center; */
+        background: rgba(0, 0, 0, .5);
+        color: white;
+        /*margin-bottom: 100px;*/
+        position: relative;
+        overflow: hidden;
+        min-height: 50vh;
+        padding-bottom: 100px;
+      }
+
+      .title {
+        font-family: "Raleway", sans-serif;
+       /* display: flex; */
+
+        font-weight: 900;
+        font-size: 6rem;
+        margin-top: 8vh;
+
+        /*padding: 1em 1em;*/
+        color: rgba(255, 255, 255); 
+        text-align: center;
+        justify-content: center; 
+
+        line-height: 100%;
+        margin-left: 5vh;
+
+      }
+      .fillertext{
+        font-family: "Raleway", sans-serif;
+       /* display: flex; */
+
+        font-weight: 300;
+        font-size: 2rem;
+        margin-top: 10vh;
+        margin-left: 4vh;
+        margin-right: 4vh;
+        
+        /*padding: 1em 1em;*/
+        color: rgba(255, 255, 255); 
+        text-align: center;
+        justify-content: center; 
+      }
+
+
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div class="video">
+      <div class="title">Wiring</div>
+      <div class="fillertext">Learned wiring, fusing, soldering, and using relays by outfitting vehicles with emergency lights and sirens. Have also wired subpanels, trailers and winches. </div>
+      <video autoplay playsinline muted id="videoPlayer">
+      
+    </div>
+    
+
+
+    <!-- Carousel Test-->
+
+    <style>
+      .carousel-item {
+        height: 50vh;
+        background: rgb(82, 57, 57);
+        color: white;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        /*margin-top: 26%; */
+      }
+      .container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 50px;
+      }
+      .overlay-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+      }
+      p{
+        font-family: "Raleway", sans-serif;
+        font-weight: 200;
+        font-size: 2rem;
+        color: rgba(255, 255, 255); 
+      }
+    </style>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      </ol>
+
+      <!--Carousel Items-->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            class="overlay-image"
+            style="background-image: url(images/wiring.jpeg)"
+          ></div>
+          <div class="container">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--Previous and next buttons-->
+      
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--Carousel Test End-->
+
+
+
+  </body>
+
+
+  
+</html>
+
+
+
+<!--Media query for mobile
+
+- set min and max widths
+- relative - elements need to respect eachother vs absolute - moving the video
+- clamp - define flexible unit
+- flexbox
+- 
+- 
+
+-->
